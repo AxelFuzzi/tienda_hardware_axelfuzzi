@@ -1,0 +1,580 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"lato", sans-serif;
+    text-decoration: none;
+}
+
+#grid-area-body{
+    display: grid;
+    grid-template-areas: 
+    "cabeza"
+    "principal"
+    "pie";
+} 
+    header{
+        grid-area: cabeza;
+    }
+    main{
+        grid-area: principal;
+    }
+    footer{
+        grid-area: pie;
+    }
+
+.logo{
+    float: left;
+    width: 150px;
+    height: 100px;
+}
+
+.logo-image{
+    width: 150px;
+    height: 100px;
+    float: left;
+}
+
+nav a{
+    text-decoration: none;
+    color: #6d6d6d;
+    display: block;
+    padding: 0px 20px;
+    transition: all 500ms ease;
+}
+
+nav a:hover{
+    background: #1572A1;
+    color: #fff;
+}
+
+.header{
+    position: sticky;
+    width: 100%;
+    height: 200px;
+    z-index: 2;
+}
+
+#btn-menu{
+    display: none;
+}
+
+.header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+label{
+    font-size: 40px;
+}
+
+.header label:hover{
+    cursor: pointer;
+    background: rgba(0,0,0,0.1);
+}
+
+nav ul{
+    padding: 0;
+    list-style: none;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+}
+
+nav li{
+    position: relative;
+    line-height: 3rem;
+}
+
+nav li ul{
+    position: absolute;
+}
+
+nav ul ul ul{
+    display: none;
+}
+
+nav li ul{
+    display: none;
+}
+
+nav li:hover > ul{
+    display: block;
+}
+
+/*ITEMS*/
+
+nav > ul{
+    background: #fff;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    flex: auto;
+}
+
+nav > ul > li{
+    float: left;
+}
+
+/* SUB-ITEMS*/
+
+nav li li{
+    background: #fff;
+    
+}
+
+nav > ul > li > ul{
+    top: 100%;
+}
+
+/* SUB-submenu*/
+
+nav ul ul ul{
+    left: 100%;
+    top: 0;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+
+
+/*--------banner-slider---------*/
+
+.slider{
+    width: 95%;
+    margin: auto;
+    position:relative;
+    overflow: hidden;
+}
+
+.slider ul{
+    padding: 0;
+    display: flex;
+    width: 400%;
+    animation: cambio 20s infinite alternate;
+}
+
+.slider li{
+    list-style: none;
+    width: 100%;
+}
+
+.slider img{
+    width: 100%;
+}
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+
+}
+
+/*------publicidad-------*/
+
+.about{
+    width: 100vw;
+}
+
+.about-amd, .about-nvidia{
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 50%;
+    position: relative;
+}
+
+.img-ryzen{
+    width: 50%;
+    height: 100%;
+    padding: 2%;
+    object-fit: cover;
+}
+
+.img-ryzen > img{
+    width: 100%;
+    height: 100%;
+}
+
+.title{
+    width: 45%;
+    height: 100%;
+    padding-top: 3%;
+} 
+
+.title > h2{
+    display: block;
+}
+
+.title > h3{
+    display: block;
+}
+
+.title > p{
+    display: block;
+    line-height: 160%;
+    margin-top: 5%;
+}
+
+.img-rtx{
+    width: 50%;
+    height: 100%;
+    padding: 2%;
+    object-fit: cover;
+}
+
+.img-rtx > img{
+    width: 100%;
+    height: 100%;
+}
+
+/*-----footer------*/
+.footer-container{
+    display: flex;
+    /*padding-top: 5%;*/
+   /* padding-bottom: 5%;*/
+    justify-content: space-around;
+}
+
+.about-us{
+    line-height: 160%;
+}
+
+footer h3{
+    padding-bottom: 10px;
+}
+/*------------formulario-contacto---------------*/
+.form-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-contact{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 40%;
+    height: 80%;
+    padding: 2%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+    border-radius: 10px;
+
+}
+
+textarea, input{
+    border: none;
+    resize: vertical;
+    outline: none;
+    padding: 1%;
+    width: 80%;
+    margin: 20px;
+}
+
+.form-button{
+    border: none;
+    outline: none;
+    padding: 2%;
+    width: 30%;
+}
+
+.form-button:hover{
+    cursor: pointer;
+    background: #1572A1;
+    color: #fff;
+}
+
+.form-font{
+    font-size: 120%;
+}
+
+form > h2{
+    margin-bottom: 10%;
+    font-size: 200%;
+}
+
+/*--------------Q&A--------------*/
+.qanda-container{
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 1%;
+}
+
+.qanda-container > h2{
+    margin-bottom: 1%;
+    margin-top: 1%;
+    padding: 0%;
+}
+
+/*-----------productos------------*/
+.products-container{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.product-container{
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+    background-color: white;
+    border-radius: 5px;
+    transition: all 500ms ease;
+}
+
+.product-container:hover{
+    box-shadow: 16px 16px 16px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.product-title{
+    font-weight: lighter;
+}
+
+.product-photo{
+    width: 100%;
+    object-fit: cover;
+}
+
+h2{
+    text-align: center;
+    padding: 5%;
+}
+
+/*---------menu responsive----------*/
+
+@media screen and (max-width: 480px){
+
+    /*-------logo-------*/
+    .logo{
+        float: left;
+        width: 140px;
+        height: 80px;
+    }
+    
+    .logo-image{
+        width: 140px;
+        height: 80px;
+        float: left;
+    }
+    /*-------header-------*/
+    .header{
+        height: 150px;
+    }
+
+    .header label{
+        display: block;
+    }
+
+    .menu{
+        top: 90%;
+        position: absolute;
+        background: #1572A1;
+        margin-left: -100%;
+        transition: all 0.5s;
+        font-size: 85%;
+    }
+
+    
+    .menu ul{
+        flex-direction: column;
+    }
+
+    nav > ul > li > ul{
+        left: 100%;
+        top: 0%;
+    }
+
+    #btn-menu:checked ~ .menu{
+        margin: 0;
+    }
+
+    /*---slider---*/
+    .slider{
+        height: 100px;
+    }
+
+    .slider li{
+        list-style: none;
+        height: 100px;
+    }
+    
+    .slider img{
+        height: 100px;
+    }
+
+    /*------publicidad-------*/
+    .about-amd{
+        display: flex;
+        margin-left: 1%;
+        margin-right: 1%;
+        height: 50%;
+        position: relative;
+    }
+
+    .about-nvidia{
+        display: flex;
+        margin-left: 1%;
+        margin-right: 1%;
+        height: 50%;
+        position: relative;
+    }
+
+    .title{
+        word-wrap: break-word;
+    }
+
+    .title > h2,h3{
+        font-size: 100%;
+    }
+
+    .title > p{
+        display: block;
+        line-height: 150%;
+        margin-top: 10%;
+        font-size: 70%;
+    }
+    /*-----footer------*/
+    footer h3, a, p{
+        font-size: 90%;
+    }
+
+    /*-----productos------*/
+
+    .products-container{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    /*------------formulario-contacto---------------*/
+    .form-contact{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        width: 80%;
+        height: 80%;
+        padding: 2%;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+        border-radius: 10px;
+    
+    }
+    
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+    /*-----logo------*/
+    .logo{
+        float: left;
+        width: 140px;
+        height: 80px;
+    }
+    
+    .logo-image{
+        width: 140px;
+        height: 80px;
+        float: left;
+    }
+
+    /*------header------*/
+    .header{
+        height: 150px;
+    }
+
+    /*-----menu tablet------*/
+    nav > ul{
+        background: #fff;
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        flex: auto;
+        font-size: 63%;
+    }
+
+    /*-------slider-------*/
+    .slider{
+        height: 100px;
+    }
+
+    .slider li{
+        list-style: none;
+        height: 100px;
+    }
+    
+    .slider img{
+        height: 100px;
+    }
+
+        /*------publicidad-------*/
+        .about-amd{
+            display: flex;
+            margin-left: 1%;
+            margin-right: 1%;
+            height: 50%;
+            position: relative;
+        }
+    
+        .about-nvidia{
+            display: flex;
+            margin-left: 1%;
+            margin-right: 1%;
+            height: 50%;
+            position: relative;
+        }
+    
+        .title > h2,h3{
+            font-size: 100%;
+        }
+    
+        .title > p{
+            display: block;
+            line-height: 150%;
+            margin-top: 10%;
+            font-size: 70%;
+        }
+
+        /*-----productos------*/
+
+    .products-container{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+     /*------------formulario-contacto---------------*/
+     .form-contact{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        width: 80%;
+        height: 80%;
+        padding: 2%;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+        border-radius: 10px;
+    
+    }
+}
+
