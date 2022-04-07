@@ -183,12 +183,48 @@ body{
     width: 100vw;
 }
 
-.about-amd, .about-nvidia{
+.about-nvidia:hover{
     display: flex;
     margin-left: 10%;
     margin-right: 10%;
     height: 50%;
     position: relative;
+    perspective: 700px;
+    transition: all 1s;
+    transform: rotateY(0deg);
+}
+
+.about-nvidia{
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 50%;
+    position: relative;
+    perspective: 700px;
+    transition: all 1s;
+    transform: rotateY(-89deg);
+}
+
+.about-amd{
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 50%;
+    position: relative;
+    perspective: 700px;
+    transition: all 1s;
+    transform: rotateY(89deg);
+}
+
+.about-amd:hover{
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 50%;
+    position: relative;
+    perspective: 700px;
+    transition: all 1s;
+    transform: rotateY(0deg);
 }
 
 .img-ryzen{
